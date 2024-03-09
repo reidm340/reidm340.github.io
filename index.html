@@ -14593,56 +14593,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Note-to-Reid">Note to Reid<a class="anchor-link" href="#Note-to-Reid">&#182;</a></h1><p>Hi Reid. I'm half way done. Honestly I'm still kinda confused exactly what we need to submit for this lol.</p>
-<p>Here's what I've done:</p>
-<ul>
-<li>Loaded the data set</li>
-<li>Asked our big question</li>
-<li>Did a lebron fact</li>
-<li>Put the lebron fact into a pie graph</li>
-<li>I still need to "attempt to tidy the data", but I think the data is already pretty tidy so I'm going to ask the prof what we should do about that<ul>
-<li>His email response: Hi Henry, In that case, just reading it and doing some checks to ensure that the dtypes of the columns are as desired should be enough. You could also make other light useful modifications, e.g., changing column names, using an index, checking for NaNs, creating a new meaningful column, etc.</li>
-<li>I'm getting to this tomorrow (Finished)<ul>
-<li>I have filtered the NaN's</li>
-<li>I've added a column for true shooting percentage</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Here's what I think still needs to be done?</p>
-<ul>
-<li>aprox. 500 word write up</li>
-<li>written colaboration plan</li>
-</ul>
-<p>Also do you want me to change the column names or just leave it as be in the abreviated form? If we leave it in the abriviated form would you mind defining what each stat is?</p>
-<p>Do you want me to get rid of the colomn that's called RK? I feel like its useless.</p>
-<p>Also I'm thinking about changing the name of the data frame to a because I'm already getting tired of writing nbaPStat lol.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Writeup:</p>
-<p>For our project, our group (Henry Miller and Reid Miller) will be attempting to predict the best choices for fantasy basketball leagues. The main dataset we will be using is “NBA_Player_Stats_2.csv,” which we extracted from the website Kaggle. It contains data on every NBA player from the 1996-97 season through the 2021-22 season, along with the following information: team, games played, games started, minutes played, field goals, field goals attempted, field goal percentage, 3-pointers, 3-pointers attempted, 3-point percentage, 2-pointers, 2-pointers attempted, 2-point percentage, effective field goal percentage, free throws, free throws attempted, free throw percentage, offensive rebounds, defensive rebounds, total rebounds, assists, steals, blocks, turnovers, personal fouls, points, season, and MVP.
-This dataset will be extremely useful because it contains all the stats that are used in fantasy basketball scoring for such a large sample of players and seasons. While there are a variety of scoring systems used in different fantasy basketball leagues (Rotisserie, Season Points, Head-to-Head: Points, Head-to-Head: Each Category), they are all based on the information above in some form. This means that we will be able to accurately recreate any individual’s fantasy output from any of these seasons, and that we will able to analyze the stats that directly affect fantasy success.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For our project, our group (Henry Miller and Reid Miller) will be attempting to predict the best choices for fantasy basketball leagues. The main dataset we will be using is “NBA_Player_Stats_2.csv,” which we extracted from the website Kaggle. It contains data on every NBA player from the 1996-97 season through the 2021-22 season, along with the following information: Player (player's name), Pos (position), Age (player's age), G (games played), GS (games started), MP (minutes played), FG (field goals made), FGA (field goals attempted), FG% (field goal percentage), 3P (3-pointers made), 3PA (3-pointers attempted), 3P% (3-point percentage), 2P (2-pointers made), 2PA (2-pointers attempted), 2P% (2-point percentage), eFG% (effective field goal percentage), FT (free throws made), FTA (free throws attempted), FT% (free throw percentage), ORB (offensive rebounds), DRB (defensive rebounds), TRB (total rebounds), AST (assists), STL (steals), BLK (blocks), TOV (turnovers), PF (personal fouls), PTS (points), Season (season these stats are for), and MVP (boolean value which is 1 when the player wins MVP). All stats are measured on a per-game average.</p>
+<p>This dataset will be extremely useful because it contains all the stats that are used in fantasy basketball scoring for such a large sample of players and seasons. While there are a variety of scoring systems used in different fantasy basketball leagues (Rotisserie, Season Points, Head-to-Head: Points, Head-to-Head: Each Category), they are all based on the information above in some form. This means that we will be able to accurately recreate any individual’s fantasy output from any of these seasons, and that we will able to analyze the stats that directly affect fantasy success.</p>
 
 </div>
 </div>
@@ -14660,20 +14613,59 @@ This dataset will be extremely useful because it contains all the stats that are
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-python"><pre><span></span>
+<div class=" highlight hl-python"><pre><span></span><span class="o">%%</span><span class="n">shell</span>
+<span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">reidm340</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="s2">"Millers'_DS_Project.ipynb"</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[NbConvertApp] Converting notebook /content/reidm340.github.io/Millers&#39;_DS_Project.ipynb to html
+[NbConvertApp] Writing 638442 bytes to /content/reidm340.github.io/Millers&#39;_DS_Project.html
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre></pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14694,7 +14686,7 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">reidm340</span><span class="o">/</span><span class="n">reidm340</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span>
@@ -14767,7 +14759,7 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'NBA_Player_Stats_2.csv'</span><span class="p">)</span>
@@ -14783,7 +14775,7 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14804,13 +14796,13 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 
-  <div id="df-4460838b-b72a-4ca8-a758-692607f378a6" class="colab-df-container">
+  <div id="df-e2eebd65-2cff-41f9-ab60-a17f90b11574" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14980,7 +14972,7 @@ This dataset will be extremely useful because it contains all the stats that are
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-4460838b-b72a-4ca8-a758-692607f378a6')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e2eebd65-2cff-41f9-ab60-a17f90b11574')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -15032,12 +15024,12 @@ This dataset will be extremely useful because it contains all the stats that are
 
     <script>
       const buttonEl =
-        document.querySelector('#df-4460838b-b72a-4ca8-a758-692607f378a6 button.colab-df-convert');
+        document.querySelector('#df-e2eebd65-2cff-41f9-ab60-a17f90b11574 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-4460838b-b72a-4ca8-a758-692607f378a6');
+        const element = document.querySelector('#df-e2eebd65-2cff-41f9-ab60-a17f90b11574');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -15057,8 +15049,8 @@ This dataset will be extremely useful because it contains all the stats that are
   </div>
 
 
-<div id="df-e81feb33-1535-4906-9c63-ee0710606340">
-  <button class="colab-df-quickchart" onclick="quickchart('df-e81feb33-1535-4906-9c63-ee0710606340')"
+<div id="df-73c06b8a-344e-4677-bee3-56ec50f5e00d">
+  <button class="colab-df-quickchart" onclick="quickchart('df-73c06b8a-344e-4677-bee3-56ec50f5e00d')"
             title="Suggest charts"
             style="display:none;">
 
@@ -15177,7 +15169,7 @@ This dataset will be extremely useful because it contains all the stats that are
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-e81feb33-1535-4906-9c63-ee0710606340 button');
+        document.querySelector('#df-73c06b8a-344e-4677-bee3-56ec50f5e00d button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
@@ -15236,7 +15228,7 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">Lebron_Teams</span> <span class="o">=</span> <span class="n">nbaPStats</span><span class="p">[</span><span class="n">nbaPStats</span><span class="p">[</span><span class="s1">'Player'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'LeBron James'</span><span class="p">][</span><span class="s1">'Tm'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15258,7 +15250,7 @@ This dataset will be extremely useful because it contains all the stats that are
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -15305,7 +15297,7 @@ Name: Tm, dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">Lebron_Teams</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
@@ -15379,7 +15371,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span><span class="o">.</span><span class="n">dtypes</span>
@@ -15400,7 +15392,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -15476,7 +15468,7 @@ dtype: object</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nan_rows</span> <span class="o">=</span> <span class="n">nbaPStats</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -15498,7 +15490,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
 
 
@@ -15532,7 +15524,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span> <span class="o">=</span> <span class="n">nbaPStats</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -15560,7 +15552,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nan_rows</span> <span class="o">=</span> <span class="n">nbaPStats</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -15582,7 +15574,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15617,6 +15609,448 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now to remove the irrelevant 'Rk' column.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">'Rk'</span><span class="p">)</span>
+<span class="n">nbaPStats</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+
+  <div id="df-72160626-a637-4900-8cba-a73c6948f731" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Player</th>
+      <th>Pos</th>
+      <th>Age</th>
+      <th>Tm</th>
+      <th>G</th>
+      <th>GS</th>
+      <th>MP</th>
+      <th>FG</th>
+      <th>FGA</th>
+      <th>FG%</th>
+      <th>...</th>
+      <th>DRB</th>
+      <th>TRB</th>
+      <th>AST</th>
+      <th>STL</th>
+      <th>BLK</th>
+      <th>TOV</th>
+      <th>PF</th>
+      <th>PTS</th>
+      <th>Season</th>
+      <th>MVP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>PG</td>
+      <td>28</td>
+      <td>SAC</td>
+      <td>31</td>
+      <td>0</td>
+      <td>17.1</td>
+      <td>3.3</td>
+      <td>8.8</td>
+      <td>0.377</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>1.2</td>
+      <td>1.9</td>
+      <td>0.5</td>
+      <td>0.0</td>
+      <td>0.6</td>
+      <td>1.0</td>
+      <td>7.3</td>
+      <td>1997-98</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>SG</td>
+      <td>23</td>
+      <td>SAC</td>
+      <td>59</td>
+      <td>16</td>
+      <td>16.3</td>
+      <td>2.4</td>
+      <td>6.1</td>
+      <td>0.403</td>
+      <td>...</td>
+      <td>1.2</td>
+      <td>2.0</td>
+      <td>0.9</td>
+      <td>0.6</td>
+      <td>0.2</td>
+      <td>1.1</td>
+      <td>1.4</td>
+      <td>6.4</td>
+      <td>1997-98</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Shareef Abdur-Rahim</td>
+      <td>SF</td>
+      <td>21</td>
+      <td>VAN</td>
+      <td>82</td>
+      <td>82</td>
+      <td>36.0</td>
+      <td>8.0</td>
+      <td>16.4</td>
+      <td>0.485</td>
+      <td>...</td>
+      <td>4.3</td>
+      <td>7.1</td>
+      <td>2.6</td>
+      <td>1.1</td>
+      <td>0.9</td>
+      <td>3.1</td>
+      <td>2.5</td>
+      <td>22.3</td>
+      <td>1997-98</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Cory Alexander</td>
+      <td>PG</td>
+      <td>24</td>
+      <td>TOT</td>
+      <td>60</td>
+      <td>22</td>
+      <td>21.6</td>
+      <td>2.9</td>
+      <td>6.7</td>
+      <td>0.428</td>
+      <td>...</td>
+      <td>2.2</td>
+      <td>2.4</td>
+      <td>3.5</td>
+      <td>1.2</td>
+      <td>0.2</td>
+      <td>1.9</td>
+      <td>1.6</td>
+      <td>8.1</td>
+      <td>1997-98</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Cory Alexander</td>
+      <td>PG</td>
+      <td>24</td>
+      <td>SAS</td>
+      <td>37</td>
+      <td>3</td>
+      <td>13.5</td>
+      <td>1.6</td>
+      <td>3.9</td>
+      <td>0.414</td>
+      <td>...</td>
+      <td>1.1</td>
+      <td>1.3</td>
+      <td>1.9</td>
+      <td>0.7</td>
+      <td>0.1</td>
+      <td>1.3</td>
+      <td>1.4</td>
+      <td>4.5</td>
+      <td>1997-98</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 31 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-72160626-a637-4900-8cba-a73c6948f731')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-72160626-a637-4900-8cba-a73c6948f731 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-72160626-a637-4900-8cba-a73c6948f731');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-6ab0f394-a1e4-4abc-9600-f3b3a9d82d19">
+  <button class="colab-df-quickchart" onclick="quickchart('df-6ab0f394-a1e4-4abc-9600-f3b3a9d82d19')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-6ab0f394-a1e4-4abc-9600-f3b3a9d82d19 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>No more 'Rk' values, so this was successful!</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>I talked about this ealier but I am now going to add a column for true shooting percentage, which combines all types of scoring to aproximate how effecient of a shooter a certain player is. This is a standardized calculation. Throughout this project we hope top come up with some of out own advanced nba stats that would be useful.</p>
 
 </div>
@@ -15627,7 +16061,7 @@ dtype: int64</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">nbaPStats</span><span class="p">[</span><span class="s1">'TS%'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">nbaPStats</span><span class="p">[</span><span class="s1">'PTS'</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">nbaPStats</span><span class="p">[</span><span class="s1">'FGA'</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">nbaPStats</span><span class="p">[</span><span class="s1">'FTA'</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.475</span><span class="p">))</span>
@@ -15649,7 +16083,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
